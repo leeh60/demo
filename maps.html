@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var NewquayZoo = {lat: 50.411704, lng: -5.068991};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: NewquayZoo
+        });
+        var marker = new google.maps.Marker({
+          position: NewquayZoo,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL8_pY3dtgsQXjq8hvFyrdpv9-DQmKNMM&callback=initMap">
+    </script>
+  </body>
+</html>
